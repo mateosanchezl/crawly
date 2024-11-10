@@ -2,7 +2,7 @@ import { GeminiAdapter, GeminiModels } from "./llm/models/GeminiAdapter";
 import { CheerioScraper } from "./scraper/CheerioScraper";
 
 async function scrape() {
-  const url = "https://www.honeywell.com/us/en/company/about-us";
+  const url = "https://www.coca-colacompany.com/about-us";
   const scraper = new CheerioScraper(url, true);
   const gemini = new GeminiAdapter(
     "***REMOVED***",
