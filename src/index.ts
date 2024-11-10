@@ -1,18 +1,26 @@
-import { GeminiAdapter } from "./llm/models/GeminiAdapter";
+import { GeminiAdapter, GeminiModels } from "./llm/models/GeminiAdapter";
 import { CheerioScraper } from "./scraper/CheerioScraper";
 
-async function run() {
-  const url = "https://www.investopedia.com/ask/answers/05/ltbondrisk.asp";
+async function scrape() {
+  const url = "https://www.honeywell.com/us/en/company/about-us";
   const scraper = new CheerioScraper(url, true);
+  const gemini = new GeminiAdapter(
+    "***REMOVED***",
+    GeminiModels.GEMINI_1_5_FLASH
+  );
 
   try {
-    console.log("Starting extraction...");
     const text = await scraper.extractText();
-    console.log("Extraction complete.");
-    console.log(text);
+
+    const result = await gemini.analyseText(
+      text,
+      "Give me information about this company for a cover letter in JSON format."
+    );
+
+    console.log("Result: ", result);
   } catch (error) {
     console.error("An error occurred:", error);
   }
 }
 
-run();
+scrape();

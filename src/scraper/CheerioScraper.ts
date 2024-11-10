@@ -32,7 +32,6 @@ export class CheerioScraper {
     $("script, style, footer, header").remove();
 
     // Strict cleaning
-    console.log("Strict:", this.strict);
     this.strict &&
       $("iframe, nav, .hidden, [aria-hidden='true'], noscript, link, meta, img").remove();
 
