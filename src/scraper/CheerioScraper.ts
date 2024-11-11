@@ -1,15 +1,30 @@
 import * as cheerio from "cheerio";
 import axios from "axios";
 
+/**
+ * A scraper that extracts and cleans text from a given URL using Cheerio.
+ */
 export class CheerioScraper {
+  /** The URL to scrape. */
   private url: string;
+  /** Whether to perform strict cleaning of the extracted text. */
   private strict: boolean;
 
+  /**
+   * Creates an instance of CheerioScraper.
+   * @param url - The URL to scrape.
+   * @param strict - Whether to perform strict cleaning (default is true).
+   */
   constructor(url: string, strict: boolean = true) {
     this.url = url;
     this.strict = strict;
   }
 
+  /**
+   * Extracts and cleans text from the URL.
+   * @returns A promise that resolves to the extracted text.
+   * @throws Will throw an error if text extraction fails.
+   */
   public async extractText(): Promise<string> {
     try {
       console.log(`Fetching URL: ${this.url}`);
@@ -27,6 +42,11 @@ export class CheerioScraper {
     }
   }
 
+  /**
+   * Cleans the extracted HTML content.
+   * @param $ - The Cheerio instance containing the HTML content.
+   * @returns The cleaned and trimmed text.
+   */
   private cleanText($: cheerio.CheerioAPI): string {
     // Remove scripts, styles, and other unwanted elements
     $("script, style, footer, header").remove();

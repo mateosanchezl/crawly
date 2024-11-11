@@ -4,10 +4,7 @@ import { CheerioScraper } from "./scraper/CheerioScraper";
 async function scrape() {
   const url = "https://www.coca-colacompany.com/about-us";
   const scraper = new CheerioScraper(url, true);
-  const gemini = new GeminiAdapter(
-    "***REMOVED***",
-    GeminiModels.GEMINI_1_5_FLASH
-  );
+  const gemini = new GeminiAdapter("YOUR_API_KEY", GeminiModels.GEMINI_1_5_FLASH);
 
   try {
     const text = await scraper.extractText();
