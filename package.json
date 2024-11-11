@@ -1,15 +1,28 @@
 {
-  "name": "crawly",
+  "name": "crawly-ai",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A simple, lightweight AI web scraping tool.",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "scraping",
+    "text analysis",
+    "cheerio",
+    "generative AI"
+  ],
+  "author": "Mateo Sanchez mateosanchez.msl@gmail.com",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mateosanchezl/crawly-ai.git"
+  },
   "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.6.3"
   },
   "dependencies": {

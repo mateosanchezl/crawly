@@ -1,0 +1,123 @@
+# Crawly AI
+
+Crawly AI is a simple, lightweight AI web scraping tool that extracts and analyzes text from web pages using Cheerio and Google's Generative AI models (for now).
+
+## Features
+
+- Extracts text from web pages using Cheerio
+- Analyzes extracted text using Google's Generative AI models
+- Supports multiple Gemini models for different use cases
+- Easy to use and integrate into your projects
+
+## Installation
+
+To install Crawly AI, use npm:
+
+```sh
+npm install crawly-ai
+```
+
+### Usage
+
+Here is an example of how to use Crawly AI:
+
+```typescript
+import { CheerioScraper, GeminiAdapter, GeminiModels } from "crawly-ai";
+
+async function main() {
+  // URL of the web page to scrape
+  const url = "https://www.example.com";
+
+  // Create a new scraper instance with the URL and strict mode enabled
+  const scraper = new CheerioScraper(url, true);
+
+  // Create a new GeminiAdapter instance with your API key and chosen model
+  const gemini = new GeminiAdapter(
+    "YOUR_GOOGLE_GENERATIVE_AI_API_KEY", // Replace with your actual API key
+    GeminiModels.GEMINI_1_5_FLASH // Choose the model that suits your needs
+  );
+
+  try {
+    // Extract text from the web page
+    const text = await scraper.extractText();
+
+    // Define your prompt for the AI analysis
+    const prompt = "Provide a summary of the key points in JSON format.";
+
+    // Analyze the extracted text using the Gemini model
+    const result = await gemini.analyseText(text, prompt);
+
+    // Output the result
+    console.log("Analysis Result:", result);
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+}
+
+main();
+```
+
+**Notes:**
+
+- **API Key:** Replace `"YOUR_GOOGLE_GENERATIVE_AI_API_KEY"` with your actual API key from Google Generative AI.
+- **URL:** Change the
+
+url
+
+variable to the web page you want to scrape.
+
+- **Prompt:** Customize the `prompt` variable to fit your specific use case.
+- **Error Handling:** The try-catch block ensures that any errors during scraping or analysis are caught and logged.
+
+## API
+
+### CheerioScraper
+
+#### `constructor(url: string, strict: boolean = true)`
+
+Creates an instance of CheerioScraper.
+
+- `url`: The URL to scrape.
+- `strict`: Whether to perform strict cleaning of the extracted text (default is true).
+
+#### `extractText(): Promise<string>`
+
+Extracts and cleans text from the URL.
+
+### GeminiAdapter
+
+#### `constructor(apiKey: string, model: GeminiModels)`
+
+Creates an instance of GeminiAdapter.
+
+- `apiKey`: Your Google Generative AI API key.
+- `model`: The Gemini model to use.
+
+#### `analyseText(text: string, prompt: string): Promise<string>`
+
+Analyzes text using the specified Gemini model and prompt.
+
+## Models
+
+### GeminiModels
+
+Enum representing the available Gemini models:
+
+- `GEMINI_1_5_FLASH`: Fast and versatile performance across a variety of tasks.
+- `GEMINI_1_5_FLASH_8B`: High volume and lower intelligence tasks.
+- `GEMINI_1_5_PRO`: Complex reasoning tasks requiring more intelligence.
+- `GEMINI_1_0_PRO`: Natural language tasks, multi-turn text and code chat, and code generation.
+- `TEXT_EMBEDDING`: Measuring the relatedness of text strings.
+- `AQA`: Providing source-grounded answers to questions.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the ISC License. See the [LICENSE](LICENSE) file for details.
+
+## Author
+
+Mateo Sanchez - [mateosanchez.msl@gmail.com](mailto:mateosanchez.msl@gmail.com)
