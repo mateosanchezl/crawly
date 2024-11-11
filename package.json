@@ -1,6 +1,6 @@
 {
   "name": "crawly-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple, lightweight AI web scraping tool.",
   "main": "dist/index.ts",
   "types": "dist/index.d.ts",
@@ -20,6 +20,9 @@
     "type": "git",
     "url": "https://github.com/mateosanchezl/crawly-ai.git"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "jest": "^29.7.0",
