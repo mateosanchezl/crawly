@@ -60,12 +60,7 @@ main();
 **Notes:**
 
 - **API Key:** Replace `"YOUR_GOOGLE_GENERATIVE_AI_API_KEY"` with your actual API key from Google Generative AI.
-- **URL:** Change the
-
-url
-
-variable to the web page you want to scrape.
-
+- **URL:** Change the url variable to the web page you want to scrape.
 - **Prompt:** Customize the `prompt` variable to fit your specific use case.
 - **Error Handling:** The try-catch block ensures that any errors during scraping or analysis are caught and logged.
 
