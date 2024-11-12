@@ -1,6 +1,6 @@
 # Crawly AI
 
-Crawly AI is a simple, lightweight AI web scraping tool that extracts and analyzes text from web pages using Cheerio and Google's Generative AI models (for now).
+Crawly AI is a super simple, lightweight tool for AI-powered web scraping. It’s designed to make web scraping with LLMs as easy as possible—no complicated setup needed. Just fire up the scraper built on top of Cheerio, and choose an LLM to work with. Right now, Crawly supports Gemini models, but I’m planning to add support for models like GPT-4, Claude, and more soon.
 
 ## Features
 
