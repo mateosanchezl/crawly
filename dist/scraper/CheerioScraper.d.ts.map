@@ -1,1 +1,10 @@
-{"version":3,"file":"CheerioScraper.d.ts","sourceRoot":"","sources":["../../src/scraper/CheerioScraper.ts"],"names":[],"mappings":"AAGA;;GAEG;AACH,qBAAa,cAAc;IACzB,yBAAyB;IACzB,OAAO,CAAC,GAAG,CAAS;IACpB,gEAAgE;IAChE,OAAO,CAAC,MAAM,CAAU;IAExB;;;;OAIG;gBACS,GAAG,EAAE,MAAM,EAAE,MAAM,GAAE,OAAc;IAK/C;;;;OAIG;IACU,WAAW,IAAI,OAAO,CAAC,MAAM,CAAC;IAiB3C;;;;OAIG;IACH,OAAO,CAAC,SAAS;CAalB"}
+{
+  "version": 3,
+  "file": "Crawler.d.ts",
+  "sourceRoot": "",
+  "sources": [
+    "../../src/scraper/Crawler.ts"
+  ],
+  "names": [],
+  "mappings": "AAGA;;GAEG;AACH,qBAAa,cAAc;IACzB,yBAAyB;IACzB,OAAO,CAAC,GAAG,CAAS;IACpB,gEAAgE;IAChE,OAAO,CAAC,MAAM,CAAU;IAExB;;;;OAIG;gBACS,GAAG,EAAE,MAAM,EAAE,MAAM,GAAE,OAAc;IAK/C;;;;OAIG;IACU,WAAW,IAAI,OAAO,CAAC,MAAM,CAAC;IAiB3C;;;;OAIG;IACH,OAAO,CAAC,SAAS;CAalB"
+}

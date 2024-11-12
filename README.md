@@ -22,14 +22,14 @@ npm install crawly-ai
 Here is an example of how to use Crawly AI:
 
 ```typescript
-import { CheerioScraper, GeminiAdapter, GeminiModels } from "crawly-ai";
+import { Crawler, GeminiAdapter, GeminiModels } from "crawly-ai";
 
 async function main() {
   // URL of the web page to scrape
   const url = "https://www.example.com";
 
   // Create a new scraper instance with the URL and strict mode enabled
-  const scraper = new CheerioScraper(url, true);
+  const scraper = new Crawler(url, true);
 
   // Create a new GeminiAdapter instance with your API key and chosen model
   const gemini = new GeminiAdapter(
@@ -66,11 +66,11 @@ main();
 
 ## API
 
-### CheerioScraper
+### Crawler
 
 #### `constructor(url: string, strict: boolean = true)`
 
-Creates an instance of CheerioScraper.
+Creates an instance of Crawler.
 
 - `url`: The URL to scrape.
 - `strict`: Whether to perform strict cleaning of the extracted text (default is true).

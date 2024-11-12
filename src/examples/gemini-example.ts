@@ -1,4 +1,4 @@
-import { CheerioScraper } from "../scraper/CheerioScraper";
+import { Crawler } from "../scraper/Crawler";
 import { GeminiModels, GeminiAdapter } from "../llm/models/GeminiAdapter";
 
 async function main() {
@@ -6,7 +6,7 @@ async function main() {
   const url = "https://www.example.com";
 
   // Create a new scraper instance with the URL and strict mode enabled
-  const scraper = new CheerioScraper(url, true);
+  const scraper = new Crawler(url, true);
 
   // Create a new GeminiAdapter instance with your API key and chosen model
   const gemini = new GeminiAdapter(

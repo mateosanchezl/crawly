@@ -1,1 +1,10 @@
-{"version":3,"file":"CheerioScraper.test.d.ts","sourceRoot":"","sources":["../../src/tests/CheerioScraper.test.ts"],"names":[],"mappings":""}
+{
+  "version": 3,
+  "file": "Crawler.test.d.ts",
+  "sourceRoot": "",
+  "sources": [
+    "../../src/tests/Crawler.test.ts"
+  ],
+  "names": [],
+  "mappings": ""
+}

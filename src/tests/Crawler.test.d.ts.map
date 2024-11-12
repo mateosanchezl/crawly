@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Crawler.test.d.ts",
+  "sourceRoot": "",
+  "sources": [
+    "Crawler.test.ts"
+  ],
+  "names": [],
+  "mappings": ""
+}

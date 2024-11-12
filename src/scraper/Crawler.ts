@@ -4,14 +4,14 @@ import axios from "axios";
 /**
  * A scraper that extracts and cleans text from a given URL using Cheerio.
  */
-export class CheerioScraper {
+export class Crawler {
   /** The URL to scrape. */
   private url: string;
   /** Whether to perform strict cleaning of the extracted text. */
   private strict: boolean;
 
   /**
-   * Creates an instance of CheerioScraper.
+   * Creates an instance of Crawler.
    * @param url - The URL to scrape.
    * @param strict - Whether to perform strict cleaning (default is true).
    */
