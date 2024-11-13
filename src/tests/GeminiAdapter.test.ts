@@ -17,11 +17,16 @@ describe("GeminiAdapter", () => {
     expect(adapter.model).toBe(model);
   });
 
-  test("should analyze text using the specified model and prompt", async () => {
+  test("should generate analysis using the specified model and prompt", async () => {
     const text = "This is a test text.";
     const prompt = "Analyze this: ";
-    const mockResponse = { response: { text: jest.fn().mockReturnValue("Generated content") } };
+    const mockResponse = {
+      response: {
+        text: jest.fn().mockReturnValue("Generated content"),
+      },
+    };
 
+    // Mock the methods of GoogleGenerativeAI
     (GoogleGenerativeAI as jest.Mock).mockImplementation(() => ({
       getGenerativeModel: jest.fn().mockReturnValue({
         generateContent: jest.fn().mockResolvedValue(mockResponse),
@@ -36,6 +41,7 @@ describe("GeminiAdapter", () => {
     const text = "This is a test text.";
     const prompt = "Analyze this: ";
 
+    // Mock generateContent to reject
     (GoogleGenerativeAI as jest.Mock).mockImplementation(() => ({
       getGenerativeModel: jest.fn().mockReturnValue({
         generateContent: jest.fn().mockRejectedValue(new Error("Generation failed")),

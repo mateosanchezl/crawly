@@ -13,5 +13,5 @@ export abstract class LLMAdapter {
    * @param prompt - The prompt to guide the analysis.
    * @returns A promise resolving to the analysis result.
    */
-  abstract analyseText(text: string, prompt: string): Promise<any>;
+  abstract analyseText(text: string, prompt: string): Promise<string>;
 }
